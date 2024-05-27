@@ -6,6 +6,8 @@ mybtn.onclick = function ()
     const outputimage = document.getElementById("outputimage");
     const arr = [];
     const img=[];
+    if (input <= 6)
+        {
     for(i = 0;i<input;i++)
         {
             const random = Math.floor(Math.random() *6)+1;
@@ -16,6 +18,10 @@ mybtn.onclick = function ()
         outputtext.textContent = [...arr].join(", ");
         
     outputimage.innerHTML = img.join(" ")
+        }
+        else{
+            outputtext.textContent =`Number should not exceed 6!`
+        }
 }
 const themebtn = document.getElementById("themebtn")
 const outputtext = document.getElementById('outputtext')
